@@ -15,6 +15,12 @@ class ApiController extends Controller
 
     }
 
+    public function zipsAsKeys() {
+
+       return json_decode(file_get_contents(storage_path('zips-as-keys.json')), true);
+
+    }
+
     public function areasAndZips(Request $request) {
         
         if($request->input('lower') == true)

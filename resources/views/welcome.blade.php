@@ -90,8 +90,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="/api/zips">All zips</a>
                     <a href="/api/areas">All areas</a>
+                    <a href="/api/zips">All areas with zips</a>
+                    <a href="/api/zips-as-keys">Zips as keys and area as value</a>
                 </div>
 
                 @php 

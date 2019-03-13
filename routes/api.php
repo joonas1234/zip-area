@@ -17,6 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/zips-as-keys', 'ApiController@zipsAsKeys');
+
 Route::get('/zips', 'ApiController@areasAndZips');
 
 Route::get('/areas', 'ApiController@areas');
