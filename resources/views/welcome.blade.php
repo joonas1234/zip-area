@@ -95,12 +95,12 @@
                 </div>
 
                 @php 
-                    $zips = json_decode(file_get_contents(storage_path('zips-lower.json')), true);
+                    $zips = json_decode(file_get_contents(storage_path('zips.json')), true);
                     $areas = array_keys($zips);
                 @endphp
                 <p style="margin: 20px 0 0 0 !important">Available Areas:</p>
                 @foreach($areas as $area) 
-                    <p style="margin:0 !important;"><a href="/api/zips/{{ $area }}">{{ $area }}</a></p>
+                    <p style="margin:0 !important;"><a href="/api/zips/{{ strtolower($area) }}">{{ $area }}</a></p>
                 @endforeach
             </div>
         </div>
