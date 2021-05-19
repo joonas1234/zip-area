@@ -25,3 +25,4 @@ Route::get('/areas', 'ApiController@areas');
 
 Route::get('/zips/{area}', 'ApiController@zipsInArea');
 
+Route::get('/city-for-zip/{zip}', 'ApiController@cityForZip');

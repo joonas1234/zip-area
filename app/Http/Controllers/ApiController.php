@@ -41,4 +41,10 @@ class ApiController extends Controller
         
     }
 
+    public function cityForZip($zip)
+    {
+        $zips = json_decode(file_get_contents(storage_path('zips-cities.json')), true);
+        return $zips[$zip];
+    }
+
 }
